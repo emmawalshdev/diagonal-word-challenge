@@ -4,6 +4,7 @@ import { BrowserRouter as Router, Route, Routes, Link, Switch } from 'react-rout
 
 
 const Home = () => {
+
     return (
         <div>
             <h1>Home</h1>
