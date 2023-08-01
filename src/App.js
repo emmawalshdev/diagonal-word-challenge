@@ -6,10 +6,11 @@ import RoutesPath from './RoutesPath';
 
 import WordGenerator from './components/WordGenerator';
 
+
 function App() {
 
   return (
-    <RoutesPath/>
+    <RoutesPath />
   );
 }
 

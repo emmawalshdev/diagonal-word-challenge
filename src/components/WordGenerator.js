@@ -1,22 +1,29 @@
 import React from "react";
 import Results from "../pages/Results";
-import { BrowserRouter as Router, Route, Routes, Link, Switch } from 'react-router-dom';
+import { BrowserRouter as Router, useNavigate, Route, Routes, Link, Switch, Navigate } from 'react-router-dom';
 
 const WordGenerator = () => {
+    const navigate = useNavigate();
+    const submitBtnHandler = (event) => {
+        event.preventDefault();
+        console.log('btn clicked');
+        navigate("/results");
+    }
     return (
-        <div className="">
-            <Router>
-            <div>
-                <Link to='/about'>
-                Submit
-                </Link>
-            </div>
-            <Routes>
-                {/* redirect to results page after submission */}
-                <Route path='/results' exact element={<Results/>} />
-            </Routes>
-            </Router>
-      </div>
+        <form className="" onSubmit={submitBtnHandler}>
+            <h2>Enter a word!</h2>
+            <p>
+                <label htmlFor="string-input">
+                    Your word
+                </label>
+                <input type="text">
+
+                </input>
+                <button type="submit">
+                    Generate diagonal
+                </button>
+            </p>
+      </form>
     )
 }
 
