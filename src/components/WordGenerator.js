@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { BrowserRouter as Router, useNavigate } from 'react-router-dom';
+import classes from './WordGenerator.module.css';
 
 const WordGenerator = () => {
 
@@ -18,20 +19,22 @@ const WordGenerator = () => {
         setUserInput(event.target.value);
     }
     return (
-        <form className="" onSubmit={submitBtnHandler}>
-            <h2>The Diagnonal word Generator</h2>
+        <form className={classes.wordGenerator} onSubmit={submitBtnHandler}>
+            <h1>The Diagnonal Word Generator</h1>
             <p>Enter a word in the text field below & click go to generate your results.</p>
-            <p>
-                <label htmlFor="string-input">
-                    Text
-                </label>
-                <input type="text" onChange={inputChangeHandler}>
+            <div className={classes.formFields}>
+                <div className={classes.fieldGroup}>
+                    <label htmlFor="string-input">
+                        Enter a word: 
+                    </label>
+                    <input type="text" onChange={inputChangeHandler}>
 
-                </input>
+                    </input>
+                </div>
                 <button type="submit">
                     Go
                 </button>
-            </p>
+            </div>
       </form>
     )
 }
