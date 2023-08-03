@@ -1,6 +1,5 @@
 import React, { useState } from "react";
-import Results from "../pages/Results";
-import { BrowserRouter as Router, useNavigate, Route, Routes, Link, Switch, Navigate } from 'react-router-dom';
+import { BrowserRouter as Router, useNavigate } from 'react-router-dom';
 
 const WordGenerator = () => {
 
@@ -10,9 +9,9 @@ const WordGenerator = () => {
 
     const submitBtnHandler = (event) => {
         event.preventDefault();
-        console.log('btn clicked');
-        navigate("/results", {state: {data:userInput}});
-        console.log(userInput);
+
+        navigate("/results", {state: {data:userInput}}); // redirect to results page
+        // console.log(userInput);
     }
 
     const inputChangeHandler = (event) => {
@@ -20,16 +19,17 @@ const WordGenerator = () => {
     }
     return (
         <form className="" onSubmit={submitBtnHandler}>
-            <h2>Enter a word!</h2>
+            <h2>The Diagnonal word Generator</h2>
+            <p>Enter a word in the text field below & click go to generate your results.</p>
             <p>
                 <label htmlFor="string-input">
-                    Your word
+                    Text
                 </label>
                 <input type="text" onChange={inputChangeHandler}>
 
                 </input>
                 <button type="submit">
-                    Generate diagonal
+                    Go
                 </button>
             </p>
       </form>
