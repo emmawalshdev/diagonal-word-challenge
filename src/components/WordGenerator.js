@@ -11,8 +11,11 @@ const WordGenerator = () => {
     const submitBtnHandler = (event) => {
         event.preventDefault();
         if(!userInput){
-            alert('You are required to enter a word!')
-        } else {
+            alert('You are required to enter a word!') // check if nothing entered
+        } else if (!userInput.replace(/\s/g, '').length){
+            alert('string only contains whitespace (ie. spaces, tabs or line breaks)'); //check if string contains only spaces
+        }
+        else {
             navigate("/results", {state: {data:userInput}}); // redirect to results page
             // console.log(userInput);
         }
