@@ -1,13 +1,14 @@
 import React from "react";
 import { useLocation, /* other hooks */ } from 'react-router-dom'; 
+import classes from './Results.module.css'
 
 const Results = (props) => {
     const { state } = useLocation();
     let str = state.data.split(''); // split word by letter + store in array
 
     return (
-        <div>
-            <h1>Results</h1>
+        <div className={classes.results}>
+            <h1>Your Results</h1>
 
             <table>
                 <tbody>

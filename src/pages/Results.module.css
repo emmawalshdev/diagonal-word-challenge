@@ -1,0 +1,19 @@
+.results {
+    max-width: 50rem;
+    margin: 2rem auto;
+    padding: 1rem;
+    border-spacing: 1rem;
+    text-align: left;
+}
+
+table {
+    max-width: 20rem;
+    width: 100%;
+    background: rgb(207, 204, 246);
+    border: 1px solid black;
+}
+
+table td {
+    padding: 0.5rem;
+    border: 1px solid grey;
+}

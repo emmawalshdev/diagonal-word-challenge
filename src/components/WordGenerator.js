@@ -10,9 +10,12 @@ const WordGenerator = () => {
 
     const submitBtnHandler = (event) => {
         event.preventDefault();
-
-        navigate("/results", {state: {data:userInput}}); // redirect to results page
-        // console.log(userInput);
+        if(!userInput){
+            alert('You are required to enter a word!')
+        } else {
+            navigate("/results", {state: {data:userInput}}); // redirect to results page
+            // console.log(userInput);
+        }
     }
 
     const inputChangeHandler = (event) => {
