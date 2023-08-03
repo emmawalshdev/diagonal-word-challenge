@@ -6,8 +6,11 @@
     text-align: left;
 }
 
+.resultsView {
+    max-width: 30rem;
+}
+
 table {
-    max-width: 20rem;
     width: 100%;
     /* background: rgb(207, 204, 246);
     border: 1px solid black; */
