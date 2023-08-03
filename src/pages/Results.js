@@ -10,6 +10,14 @@ const Results = (props) => {
         <div className={classes.results}>
             <h1>Your Results</h1>
 
+            <p>
+                <em>
+                    You entered the word: <b>{ state.data }</b>
+                </em>
+            </p>
+
+            <h3>Your word displayed diagonally</h3>
+
             <table>
                 <tbody>
                 {/* left to right results */}
